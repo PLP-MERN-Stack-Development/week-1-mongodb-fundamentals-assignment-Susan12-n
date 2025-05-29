@@ -47,8 +47,8 @@ db.books.aggregate([
 
  ### sreenshots
 
- ![compass images](images/image1.png.png)
- ![compass images](images/image2.png.png)
+ ![compass images](images/photo2.png)
+ ![compass images](images/photo1.png)
 
 
 
