@@ -1,1 +1,59 @@
-[![Open in Visual Studio Code](https://classroom.github.com/assets/open-in-vscode-2e0aaae1b6195c2367325f4f02e2d04e9abb55f0b24a779b69b11b9e10269abc.svg)](https://classroom.github.com/online_ide?assignment_repo_id=19645186&assignment_repo_type=AssignmentRepo)
+# MongoDB Bookstore Scripts
+
+This project contains MongoDB queries and aggregation pipelines for managing and analyzing data in a `books` collection.
+
+---
+
+##  Prerequisites
+
+-  MongoDB installed locally or access to a MongoDB Atlas cloud cluster
+- Mongo Shell (`mongosh`) or MongoDB Compass
+- A collection named `books` with fields such as:
+  - `title` (string)
+  - `author` (string)
+  - `genre` (string)
+  - `published_year` (number)
+  - `price` (number)
+  - `in_stock` (boolean)
+
+---
+
+##  How to Run the Scripts
+
+###  1. Open the Mongo Shell
+
+**Local MongoDB:**
+
+```bash
+mongosh
+
+---
+
+
+##  📂 2. Switch to the Correct Database 
+
+-use bookstore
+
+---
+
+ # 3. Run Queries
+
+ ```js
+db.books.aggregate([
+  { $group: { _id: "$genre", avgPrice: { $avg: "$price" } } }
+])
+
+---
+
+ ### sreenshots
+
+ ![compass images](images/Screenshot%20(19).png)
+ ![compass images](images/Screenshot%20(20).png)
+
+
+
+
+
+
+
+
